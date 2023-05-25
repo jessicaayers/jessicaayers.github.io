@@ -6,4 +6,4 @@ Information about me:
   + This is my last semester in NCSU's Master of Statistics Program
   + My blog will contain content about data science
  
- knitr::include_graphics("/Users/jessayers./Desktop/IMG_5599.jpeg")
+![](IMG_5599.jpeg)
