@@ -6,4 +6,4 @@ Information about me:
   + This is my last semester in NCSU's Master of Statistics Program
   + My blog will contain content about data science
  
-![](IMG_5599.jpeg | width = 50)
+![](IMG_5599.jpeg)
