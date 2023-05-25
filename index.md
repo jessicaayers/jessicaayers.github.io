@@ -1,4 +1,5 @@
 Blog for ST 558 - 651.
+
 Information about me:
 
   + My name is Jessica Ayers
