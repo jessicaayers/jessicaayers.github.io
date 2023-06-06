@@ -3,9 +3,8 @@ Programming Background
 Jessica Ayers
 2023-06-06
 
-``` r
-knitr::opts_chunk$set(fig.path = "../images/")
-```
+
+`knitr::opts_chunk$set(fig.path = "../images/")`
 
 ## Prompt
 
