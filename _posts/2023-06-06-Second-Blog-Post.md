@@ -19,7 +19,7 @@ experience when first learning it.)**
 The majority of my programming experience has been in either SAS or R.
 I’ve worked with SAS more, but I have seen that many individuals in the
 work force rely on R more. That is one of the major reasons that I am
-taking this class; to be proficient in SAS and R is my goal. One thing I
+taking this class: to be proficient in SAS and R is my goal. One thing I
 like about R is how organized everything can be. With access to R
 projects, R Markdown, and using R script, I can work with data easily.
 One thing I miss about SAS is that it is not case sensitive. I think R
