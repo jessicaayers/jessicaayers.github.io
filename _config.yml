@@ -40,11 +40,6 @@ defaults:
       type: post
     values:
       tags: Other
-steps:
-  - uses: actions/checkout@v2
-  - uses: jessicaayers/action-build-deploy-ghpages@v3.1.0
-    with:
-      github_token: ${{ secrets.GITHUB_TOKEN }}
       
  permalink: /:title.html
 
