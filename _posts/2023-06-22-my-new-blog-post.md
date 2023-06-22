@@ -10,6 +10,8 @@ output_dir = "/Users/jessayers/Documents/ST 558/TOPIC 2/blog/_posts" ,
 output_options = list(html_preview = FALSE))
 ```
 
+## Vignette Blog Post
+
 Once you’ve completed your vignette you should write a brief blog post:
 
 - explaining what you did in the project and any interesting findings
