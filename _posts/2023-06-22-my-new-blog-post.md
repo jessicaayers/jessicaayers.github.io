@@ -3,13 +3,6 @@ Vignette Blog Post
 Jessica Ayers
 2023-06-22
 
-``` r
-rmarkdown::render("/Users/jessayers/Documents/ST 558/TOPIC 2/blog/_Rmd/2023-06-22-my-new-blog-post.Rmd",
-output_format = "github_document",  
-output_dir = "/Users/jessayers/Documents/ST 558/TOPIC 2/blog/_posts" ,
-output_options = list(html_preview = FALSE))
-```
-
 ## Vignette Blog Post
 
 ### Explanation of Project & Interesting Findings
