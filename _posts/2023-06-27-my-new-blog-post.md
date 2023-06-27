@@ -71,8 +71,4 @@ Now we can plot the predicted values of this regression.
 ggPredict(glmFit)
 ```
 
-    ## Warning in eval(family$initialize): non-integer #successes in a binomial glm!
-
-    ## Warning in eval(family$initialize): non-integer #successes in a binomial glm!
-
-![](../images/unnamed-chunk-19-1.png)<!-- -->
+![](../images/unnamed-chunk-6-1.png)<!-- -->

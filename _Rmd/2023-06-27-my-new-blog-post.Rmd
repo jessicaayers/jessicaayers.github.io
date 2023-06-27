@@ -53,6 +53,6 @@ glmFit <- glm(count ~ Temp*Holiday, data = bikeData, family = "binomial")
 
 Now we can plot the predicted values of this regression.
 
-```{r, message = FALSE}
+```{r, warning = FALSE}
 ggPredict(glmFit)
 ```
