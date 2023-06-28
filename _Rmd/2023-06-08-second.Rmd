@@ -5,13 +5,13 @@ date: "2023-06-06"
 ---
 
 ```{r, echo = FALSE, eval = FALSE}
-rmarkdown::render("/Users/jessayers/Documents/ST 558/TOPIC 2/blog/_Rmd/2023-06-08-first.Rmd",
+rmarkdown::render("/Users/jessayers/Documents/ST 558/TOPIC 2/blog/_Rmd/2023-06-08-second.Rmd",
 output_format = "github_document",  
 output_dir = "/Users/jessayers/Documents/ST 558/TOPIC 2/blog/_posts" ,
-output_options = list(html_preview = FALSE)) 
+output_options = list(html_preview = FALSE))  
 ```
 
-```{r}
+```{r, echo = FALSE}
 knitr::opts_chunk$set(fig.path = "../images/")
 ```
 
