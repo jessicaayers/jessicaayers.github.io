@@ -1,0 +1,65 @@
+---
+title: "Programming Background"
+author: "Jessica Ayers"
+date: "2023-07-18"
+---
+
+```{r, echo = FALSE, eval = FALSE}
+rmarkdown::render("/Users/jessayers/Documents/ST 558/TOPIC 2/blog/_Rmd/2023-07-18-fourth.Rmd",
+output_format = "github_document",  
+output_dir = "/Users/jessayers/Documents/ST 558/TOPIC 2/blog/_posts" ,
+output_options = list(html_preview = FALSE))  
+```
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(fig.path = "../images/")
+```
+
+# Machine Learning Reflection
+
+## What method did you find most interesting?  
+
+I found the Random Forest method to be the most interesting. It is a method that has been referenced many times in my academic career, but one that I had never explicitly learned. 
+
+## About Random Forests
+
+The Random Forest method is a tree-based method that works best with predicting new values. Similar to many tree-based methods, predictability is the goal. A disadvantage of this method is that unlike regression methods, results are not easily interpreted. Bootstrapped samples are used to create random trees from a chosen subset of predictors. As an extension to bagging, the number of predictors included is randomly selected and does not have to stay constant. Compared to bagging, this process improves the overall fit of the model. 
+
+## Fit the model 
+
+The packages used to fit this model are the `tidyverse` and `randomForest`. The `mlbench` package will be used to access the BostonHousing data set.
+
+```{r packages, message = FALSE}
+library(tidyverse)
+library(randomForest)
+library(mlbench)
+```
+
+A training a test data set will be fit on the BostonHousing data set from the `mlbench` package. The training set with have 75% of the data. 
+
+```{r traintest}
+set.seed(100)
+train <- sample(1:nrow(BostonHousing), size = nrow(BostonHousing)*0.75) 
+test <- setdiff(1:nrow(BostonHousing), train)
+BHTrain <- BostonHousing[train, ] 
+BHTest <- BostonHousing[test, ]
+```
+
+The response variable is `medv` as it is the median value of homes in thousands. Using a random forest model, the ideal number of predictors will be found to efficiently predict this variable of interest. We can first fit the model by centering and scaling the data and using 5-fold cross validation:
+
+```{r fit}
+rfFit <- train(medv ~ ., data = BHTrain,
+                         method = "rf",
+                         preProcess = c("center", "scale"),
+                         trControl = trainControl(method = "cv",number = 5),
+                         tuneGrid = data.frame(mtry = 1:13))
+rfFit
+rfFit$bestTune
+```
+
+The most efficient number of predictors chosen from this model was `r rfFit$bestTune`. We can then see how efficient this model is for predicting the median value of homes:
+
+```{r prediction}
+rfPred <- predict(rfFit, newdata = BHTest) 
+postResample(rfPred, obs = BHTest$medv)
+```
